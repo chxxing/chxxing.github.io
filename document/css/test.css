@@ -1,0 +1,48 @@
+* {
+  background: #ffd2d2;
+}
+
+.basic01 {
+  padding: 100px 0;
+  text-align: center;
+}
+
+hr {
+  background: #ffffff;
+  border: 0px;
+  height: 1px;
+}
+
+.basic01 h3 {
+  margin: 30px 0 0 0;
+  color: rgb(153, 153, 153);
+}
+
+.basic01 h2 {
+  color: rgb(255, 67, 67);
+  margin: 0 0 20px 0;
+  text-shadow: #ffaeae -7px +5px;
+  font-weight: bolder;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.basic01 p {
+  font-size: 15px;
+  margin: 10px 0 30px 0;
+}
+
+.basic01 .container {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.basic01 .container img {
+  width: 100%;
+}
+
+.basic01 figure {
+  flex: 1;
+}
