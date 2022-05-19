@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position 02</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/position02.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <figure>
+        <img src="../img/m05..jpg" alt="" />
+      </figure>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="">menu01</a></li>
+        <hr />
+        <li><a href="">menu02</a></li>
+        <hr />
+        <li><a href="">menu03</a></li>
+        <hr />
+        <li><a href="">menu04</a></li>
+        <hr />
+        <li><a href="">menu05</a></li>
+        <hr />
+        <li><a href="">menu06</a></li>
+        <hr />
+      </ul>
+    </nav>
+    <div class="mopen">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <script>
+      document.querySelector(".mopen").addEventListener("click", function () {
+        document.querySelector("nav").classList.toggle("oo");
+        this.classList.toggle("oo");
+      });
+    </script>
+  </body>
+</html>
