@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ol li {
+        margin: 0 0 30px 0;
+        border-bottom: 1px solid #ddd;
+        padding: 0 0 30px 0;
+      }
+
+      strong {
+        display: block;
+        color: rgb(255, 61, 61);
+      }
+
+      a {
+        color: rgb(0, 42, 180);
+        font-size: 19px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>display</h2>
+    <ol>
+      <li>
+        <!-- 
+                2022. 05. 17 choi.
+                경로
+                ./ 나의 형제 레벨
+                ../ 나의 부모 레벨
+             -->
+        <a href="./doc/box01.html">box 01</a>
+        <p>테그의 일반적인 성질에 대해서 배운다.</p>
+        <em>2022.05.17</em>
+      </li>
+      <li>
+        <!-- 
+                2022. 05. 17 choi.
+                경로
+                ./ 나의 형제 레벨
+                ../ 나의 부모 레벨
+             -->
+        <a href="./doc/box02.html">box 02</a>
+        <p>박스의 기본 성질을 또 알아보았다.</p>
+        <em>2022.05.17</em>
+        <strong>중요함.</strong>
+      </li>
+
+      <li>
+        <a href="./doc/box03.html">box 03</a>
+        <p>박스를 가로로 나열해 보았다.</p>
+        <pre>
+          - 이미지 삽입 : div class, container, figure, img. 
+        </pre>
+        <em>2022.05.17</em>
+        <strong>중요함.</strong>
+      </li>
+
+      <li>
+        <a href="./doc/box04.html">box 04</a>
+        <p>레이아웃의 기초 박스의 위치변경.</p>
+        <pre>
+          - 로고와 메뉴 간격띄우기
+          - display : flex 를 이용한 박스배열
+        </pre>
+        <em>2022.05.18</em>
+        <strong>중요함.</strong>
+      </li>
+    </ol>
+
+    <h2>position</h2>
+    <!-- position: static, relative, absolute(top,left,bottom,right), fixed
+         display: none, block, inline-block, inline, flex -->
+    <ol>
+      <li>
+        <a href="./doc/position01.html">position의 기초 01</a>
+        <p>기본적인 포지션을 배워보았다.</p>
+        <pre>
+          - button 이용
+          - 함수가 하는 일 : 클릭, 사라지게 하기
+          - position: 겹쳐놓기
+        </pre>
+        <em>2022.05.19</em>
+      </li>
+
+      <li>
+        <a href="./doc/position02.html">position의 기초 02</a>
+        <p>기본적인 포지션을 배워보았다. 움직이는 거 너무 재밌다. :)</p>
+        <pre>
+          *공식으로 외우기*
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          - transform은 레이아웃을 안 깨고, 자기자신을 바꾼다.
+        </pre>
+        <em>2022.05.19</em>
+      </li>
+    </ol>
+  </body>
+</html>
