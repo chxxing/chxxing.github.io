@@ -4,7 +4,9 @@ body {
 
 body .container img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background: no-repeat center;
+  background-size: cover;
 }
 
 nav {
@@ -20,6 +22,10 @@ nav {
   height: 100vh;
   background: rgb(255, 255, 255);
   transition: 0.5s;
+}
+
+nav li {
+  border-bottom: 1px solid #ddd;
 }
 
 nav.oo {
