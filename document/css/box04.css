@@ -37,28 +37,38 @@ nav {
 }
 
 .header05 nav {
-    margin: 0 0 0 auto;
+  margin: 0 0 0 auto;
 }
 
 .basic {
-    line-height: 100px;
+  line-height: 100px;
 }
 
 .basic .container {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .basic nav {
-    margin: 0 0 0 auto;
+  margin: 0 0 0 auto;
 }
 
 .basic nav ul {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .basic .icon {
-    margin: 0 0 0 30px;
+  margin: 0 0 0 30px;
+}
+
+.header06 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header07 {
+  display: flex;
+  justify-content: space-evenly;
 }
