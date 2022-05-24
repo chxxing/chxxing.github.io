@@ -13,9 +13,6 @@ body {
   font-size: 0.8rem;
 }
 
-.Wrap {
-}
-
 .top_banner {
   border-top: 3px solid var(--mc);
   border-bottom: 1px solid var(--gc);
