@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 선택자 기본 / 기본 박스 02</title>
+    <style>
+        /* 모든 선택자 : 별표표시 - body까지 다 포함 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* outline: 1px solid #ff0000; */
+        }
+
+        /* tag 선택자 / 후손 선택자 */
+        section li {
+            color: #ff0000;
+        }
+
+        section li:nth-child(1) {
+            color: #369;
+        }
+
+        /* 전체 section의 두번째 */
+        section div:nth-child(2) {
+            color: #ff0;
+        }
+
+        /* tag가 어떤 타입이냐 에서 두번째 */
+        section div:nth-of-type(2) {
+            color: #0ff;
+        }
+
+        /* id가 태그선택자보다 계급이 높다 */
+        #color {
+            color: #0f0;
+        }
+
+        /* id가 class보다 계급이 높다 */
+        .color {
+            color: #359;
+        }
+
+        /* color빼고 나머지 다 */
+        .color~li {
+            color: lightcoral;
+        }
+
+        /* 인접형제선택자 (바로 아래) */
+        .color+li {
+            color: chocolate;
+        }
+
+        /* border는 공간이 있는데 outline은 레이아웃이 안된다 */
+        input {
+            outline: none;
+        }
+
+        /* attribute 선택자 */
+        input[type="text"] {
+            border: 1px solid #f00;
+        }
+
+        [class="color"] {
+            background: #ff0;
+        }
+
+        [class="col"] {
+            background: #333;
+        }
+
+        /* section 아래의 ul과 section 아래의 div , 'section'이 빠지면 모든 div 선택 */
+        section ul,
+        section div {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li>BOX01</li>
+            <li id="color" class="color">BOX02</li>
+            <li class="col">BOX03</li>
+            <li>BOX04</li>
+            <li>BOX05</li>
+            <li>BOX06</li>
+            <li>BOX07</li>
+        </ul>
+        <!-- ul은 'li'만 들고온다. ul만으로 block만들기 금지. naming규칙 : 숫자는 앞에X.뒤에O. -->
+        <div>
+            BOX08
+        </div>
+        <div>
+            BOX09
+        </div>
+        <input type="text">
+        <input type="search">
+    </section>
+    <div>
+        BOX10
+    </div>
+</body>
+
+</html>
