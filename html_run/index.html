@@ -14,20 +14,31 @@
             font-family: "Noto Sans KR", sans-serif;
         }
 
-        ul li {
-            margin: 0 0 10px 0;
-            padding: 0 0 10px 0;
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        details>summary {
+            font-size: 17px;
+            color: #333;
         }
 
         a {
             color: rgb(0, 42, 180);
-            font-size: 19px;
-            font-weight: 700;
+            font-size: 17px;
+            font-weight: 500;
         }
 
         p {
             line-height: 10px;
             font-size: 15px;
+        }
+
+        hr {
+            border: none;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
@@ -35,89 +46,123 @@
 <body>
     <h1>HTML BASIC</h1>
     <hr />
-    <h2>기본 박스 : box-model</h2>
-    <ul>
-        <li>
-            <a href="./doc/box01.html">basic box 01</a>
-            <p>기본적인 박스의 성질에 대한 이해 (width height padding margin)</p>
-            <p>width는 늘어났다.</p>
-        </li>
-        <li>
-            <a href="./doc/box02.html">basic box 02</a>
-            <p>선택자에 대한 이해</p>
-            <p>ul은 li만 들고온다.</p>
-        </li>
-    </ul>
-    <h2>다단메뉴 : position의 이해</h2>
-    <ul>
-        <li>
-            <a href="./doc/test01.html">multi menu 01</a>
-            <p>내부 스타일을 이용하여 간단한 reset</p>
-            <p>hover을 어디에(자식 선택자 or 후손 선택자) 두냐에 따라서 다르다.</p>
-            <p>기준이 되는 position: relative;</p>
+    <h2>기본 박스 : box-model / 다단메뉴 : position의 이해</h2>
+    <details>
+        <summary>2022-06-02</summary>
+        <ul>
+            <li>
+                <a href="./doc/box01.html">basic box 01</a>
+                <p>기본적인 박스의 성질에 대한 이해 (width height padding margin)</p>
+                <p>width는 늘어났다.</p>
+            </li>
+            <li>
+                <a href="./doc/box02.html">basic box 02</a>
+                <p>선택자에 대한 이해</p>
+                <p>ul은 li만 들고온다.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="./doc/test01.html">multi menu 01</a>
+                <p>내부 스타일을 이용하여 간단한 reset</p>
+                <p>hover을 어디에(자식 선택자 or 후손 선택자) 두냐에 따라서 다르다.</p>
+                <p>기준이 되는 position: relative;</p>
 
-        </li>
-        <li>
-            <a href="./doc/multi_menu01.html">multi menu 02</a>
-            <p>메뉴 개별적으로 레이아웃 잡기</p>
-            <p>before을 사용하여 말풍선꼬리 만들기</p>
-        </li>
-        <li>
-            <a href="./doc/multi_menu02.html">multi menu 03</a>
-            <p>visibility, display:block, opacity 개념</p>
-            <p>visibility + opacity 를 이용한 자연스러운 효과</p>
-        </li>
-        <em>2022-06-02</em>
-    </ul>
+            </li>
+            <li>
+                <a href="./doc/multi_menu01.html">multi menu 02</a>
+                <p>메뉴 개별적으로 레이아웃 잡기</p>
+                <p>before을 사용하여 말풍선꼬리 만들기</p>
+            </li>
+            <li>
+                <a href="./doc/multi_menu02.html">multi menu 03</a>
+                <p>visibility, display:block, opacity 개념</p>
+                <p>visibility + opacity 를 이용한 자연스러운 효과</p>
+            </li>
+    </details>
     <hr />
-    <ul>
-        <li>
-            <a href="./doc/display01.html">display 01</a>
-            <p>inline요소의 개념</p>
-            <p>inline요소를 inline-block, block요소로 바꾸면서 이해하기</p>
-        </li>
-    </ul>
     <h2>position : position의 이해</h2>
-    <ul>
-        <li>
-            <a href="./doc/position01.html">position 01</a>
-            <p>position의 기본적인 개념</p>
-        </li>
-        <li>
-            <a href="./doc/position02.html">position 02</a>
-            <p>position: sticky; 를 간단하게 이용함</p>
-        </li>
-        <li>
-            <a href="./doc/position03.html">position 03</a>
-            <p>position: sticky;를 이용하여 홈페이지 따라해보기</p>
-            <p>각각의 section에 class를 적용하여 이미지 넣어봄</p>
-        </li>
-        <em>2022-06-03</em>
-    </ul>
-    <hr />
-    <ul>
-        <li>
-            <a href="./doc/hover01.html">hover 01</a>
-            <p>hover를 이용하여 position 이해하기</p>
-            <p>기준을 안잡으면 body가 기준이 되므로 position: relative;로 기준 정해주기</p>
-            <p>after와 before 박스를 만들어서 transition 효과 나타내기</p>
-        </li>
-        <em>2022-06-07</em>
-    </ul>
+    <details>
+        <summary>2022-06-03</summary>
+        <ul>
+            <li>
+                <a href="./doc/display01.html">display 01</a>
+                <p>inline요소의 개념</p>
+                <p>inline요소를 inline-block, block요소로 바꾸면서 이해하기</p>
+            </li>
+            <li>
+                <a href="./doc/position01.html">position 01</a>
+                <p>position의 기본적인 개념</p>
+            </li>
+            <li>
+                <a href="./doc/position02.html">position 02</a>
+                <p>position: sticky; 를 간단하게 이용함</p>
+            </li>
+            <li>
+                <a href="./doc/position03.html">position 03</a>
+                <p>position: sticky;를 이용하여 홈페이지 따라해보기</p>
+                <p>각각의 section에 class를 적용하여 이미지 넣어봄</p>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>2022-06-07</summary>
+        <ul>
+            <li>
+                <a href="./doc/hover01.html">hover 01</a>
+                <p>hover를 이용하여 position 이해하기</p>
+                <p>기준을 안잡으면 body가 기준이 되므로 position: relative;로 기준 정해주기</p>
+                <p>after와 before 박스를 만들어서 transition 효과 나타내기</p>
+            </li>
+        </ul>
+    </details>
     <hr />
     <h2>가상요소 선택자 : before, after</h2>
-    <ul>
-        <li>
-            <a href="./doc/pseudo_element01.html">pseudo element 01</a>
-            <p>가상요소 선택자인 before와 after의 기본이해</p>
-            <p>text 사이 또는 양 옆에 선긋기</p>
-            <p>li앞에 리스트 도트를 before로 적용</p>
-            <p>figure에 data-num으로 숫자적용</p>
-            <p>hr의 기본성질과 그 위에 아이콘 올리기</p>
-        </li>
-        <em>2022-06-08</em>
-    </ul>
+    <details>
+        <summary>2022-06-08</summary>
+        <ul>
+            <li>
+                <a href="./doc/pseudo_element01.html">pseudo element 01</a>
+                <p>가상요소 선택자인 before와 after의 기본이해</p>
+                <p>text 사이 또는 양 옆에 선긋기</p>
+                <p>li앞에 리스트 도트를 before로 적용</p>
+                <p>figure에 data-num으로 숫자적용</p>
+                <p>hr의 기본성질과 그 위에 아이콘 올리기</p>
+            </li>
+        </ul>
+    </details>
     <hr />
+    <h2>가로배치 : header</h2>
+    <details open>
+        <summary>2022-06-09</summary>
+        <ul>
+            <li>
+                <a href="./doc/header01.html">header 01</a>
+                <p>기본적인 틀에 로고와 메뉴 가로배치</p>
+                <p>space-between으로 사이 간격을 띄어줌</p>
+            </li>
+            <li>
+                <a href="./doc/header02.html">header 02</a>
+                <p>로고와 메뉴 옆에 아이콘 배치</p>
+                <p>메뉴와 아이콘 중앙배치</p>
+            </li>
+            <li>
+                <a href="./doc/header03.html">header 03</a>
+                <p>메뉴를 정중앙으로 배치</p>
+                <p>로고와 아이콘을 각각 너비를 주고 메뉴를 중앙으로 배치</p>
+            </li>
+            <li>
+                <a href="./doc/header04.html">header 04</a>
+                <p>메뉴 중앙 배치</p>
+                <p>margin을 좌우로 auto를 적용</p>
+            </li>
+            <li>
+                <a href="./doc/header05.html">header 05</a>
+                <p>로고를 중앙으로 배치</p>
+                <p>flex: 1;</p>
+            </li>
+        </ul>
+    </details>
 </body>
 
 </html>
