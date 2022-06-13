@@ -1,0 +1,133 @@
+img {
+    max-width: 100%;
+}
+
+.visual_slider figure {
+    height: 600px;
+}
+
+.visual_slider .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+    /* background 전체로 채우는 공식처럼 생각하고 외우기 */
+}
+
+.visual_slider .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.visual_slider .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main {
+    position: relative;
+}
+
+.main .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+/* slick 자체 내에서 js가 만들어 논 class */
+.main .slick-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .slick-dots li {
+    display: inline-block;
+    /* 버튼 좌우로 정렬 */
+    width: 100px;
+    height: 5px;
+    background: #333;
+    margin: 0 2px;
+}
+
+/* transition을 주기 위해 css로 가상요소(박스)를 만들기 */
+.main .slick-dots li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+
+.main .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.main .slick-dots li button {
+    display: none;
+}
+
+.main .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    /* 버튼 초기화 */
+    font-size: 0;
+    border: none;
+    background: transparent;
+    /* 배경 투명하게 */
+    width: 100px;
+    height: 100px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    opacity: 0.3;
+}
+
+.main .slick-arrow:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+/* slick 버튼의 class */
+.main .slick-prev {
+    margin: 0 0 0 -700px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    /* transform 속성이 중복되면 뒤에 있는 게 덮어쓴다. 그래서 연속적으로 쓰기 */
+}
+
+.main .slick-next {
+    margin: 0 0 0 700px;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.main .wheel {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 55px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    font-size: 0;
+}
+
+.main .wheel span {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 12px;
+    background: #fff;
+    border-radius: 1px;
+    animation: wheel 0.5s infinite;
+}
+
+@keyframes wheel {
+    to {
+        top: 15px;
+    }
+}
