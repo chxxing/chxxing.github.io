@@ -1,0 +1,167 @@
+#header {
+    line-height: 100px;
+    border-bottom: 1px solid #000;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 메뉴는 자식을 잡아서 쓰는게 좋음 */
+#header .gnb>ul {
+    display: flex;
+    /* gap: 40px; IE에서 안먹히니까 a에 padding */
+}
+
+#header .gnb>ul a {
+    display: block;
+    padding: 0 20px;
+}
+
+#main {
+    position: relative;
+}
+
+.main_visual {
+    position: relative;
+}
+
+.main_slider figure {
+    position: relative;
+    /* figure에 기준을 잡아야 각 슬라이드마다 inner가 나옴 */
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.main_slider .itm01 {
+    background-image: url(../img/mainvisual01.jpg);
+}
+
+.main_slider .itm02 {
+    background-image: url(../img/mainvisual02.jpg);
+}
+
+.main_slider .itm03 {
+    background-image: url(../img/mainvisual03.jpg);
+}
+
+.main_slider .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+
+.main_slider figure .inner h2 {
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* 대문자로 */
+    margin: 0 0 10px 0;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_slider figure.on .inner h2 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_slider figure .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_slider figure.on .inner p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+
+.main_slider figure .inner a {
+    display: inline-block;
+    /* 글자수에 따라서 박스크기가 유동적임 */
+    background: #333;
+    padding: 5px 15px 10px;
+    /* 폰트 디자인때문에 아래 padding을 더 줌 */
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_slider figure.on .inner a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+
+.main_visual .num {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-100%);
+    /* 1200px의 기준을 맞추려고 */
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/num.png);
+    background-position-y: 0;
+    margin: 0 0 0 600px;
+    transition: 0.5s;
+}
+
+.main_visual .custom_dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: #ddd;
+    display: flex;
+}
+
+.main_visual .custom_dots li {
+    position: relative;
+    flex: 1;
+}
+
+.main_visual .custom_dots li~li {
+    border-left: 1px solid #fff;
+}
+
+.main_visual .custom_dots li a {
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.main_visual .custom_dots li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+
+.main_visual .custom_dots li.on::before {
+    width: 100%;
+    transition: 2s;
+}
+
+.main_visual i {
+    font-size: 30px;
+    vertical-align: middle;
+}
