@@ -1,10 +1,273 @@
-<div>최은진</div>
-<script>
-  document.querySelector("div").style.display = "none";
-</script>
-<style>
-  div {
-    color: red;
-    display: block;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASIC</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+        @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        details>summary {
+            font-size: 17px;
+            color: #333;
+        }
+
+        a {
+            color: rgb(0, 42, 180);
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        p {
+            line-height: 10px;
+            font-size: 15px;
+        }
+
+        hr {
+            border: none;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML BASIC</h1>
+    <hr />
+    <h2>기본 박스 : box-model / 다단메뉴 : position의 이해</h2>
+    <details>
+        <summary>2022-06-02</summary>
+        <ul>
+            <li>
+                <a href="./doc/box01.html">basic box 01</a>
+                <p>기본적인 박스의 성질에 대한 이해 (width height padding margin)</p>
+                <p>width는 늘어났다.</p>
+            </li>
+            <li>
+                <a href="./doc/box02.html">basic box 02</a>
+                <p>선택자에 대한 이해</p>
+                <p>ul은 li만 들고온다.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="./doc/test01.html">multi menu - test</a>
+                <p>내부 스타일을 이용하여 간단한 reset</p>
+                <p>hover을 어디에(자식 선택자 or 후손 선택자) 두냐에 따라서 다르다.</p>
+                <p>기준이 되는 position: relative;</p>
+
+            </li>
+            <li>
+                <a href="./doc/multi_menu01.html">multi menu 01</a>
+                <p>메뉴 개별적으로 레이아웃 잡기</p>
+                <p>before을 사용하여 말풍선꼬리 만들기</p>
+            </li>
+            <li>
+                <a href="./doc/multi_menu02.html">multi menu 02</a>
+                <p>visibility, display:block, opacity 개념</p>
+                <p>visibility + opacity 를 이용한 자연스러운 효과</p>
+            </li>
+    </details>
+    <details>
+        <summary>2022-06-10</summary>
+        <ul>
+            <li>
+                <a href="./doc/multi_menu03.html">multi menu 03</a>
+                <p>다단메뉴를 반응형으로 나눠서 만들어보기</p>
+                <p>position : static;을 반응형에서 사용</p>
+                <p>반응형 width는 viewport를 기준</p>
+                <p>js를 사용해서 click했을 때 움직임 나타내기</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>position : position의 이해</h2>
+    <details>
+        <summary>2022-06-03</summary>
+        <ul>
+            <li>
+                <a href="./doc/display01.html">display 01</a>
+                <p>inline요소의 개념</p>
+                <p>inline요소를 inline-block, block요소로 바꾸면서 이해하기</p>
+            </li>
+            <li>
+                <a href="./doc/position01.html">position 01</a>
+                <p>position의 기본적인 개념</p>
+            </li>
+            <li>
+                <a href="./doc/position02.html">position 02</a>
+                <p>position: sticky; 를 간단하게 이용함</p>
+            </li>
+            <li>
+                <a href="./doc/position03.html">position 03</a>
+                <p>position: sticky;를 이용하여 홈페이지 따라해보기</p>
+                <p>각각의 section에 class를 적용하여 이미지 넣어봄</p>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>2022-06-07</summary>
+        <ul>
+            <li>
+                <a href="./doc/hover01.html">hover 01</a>
+                <p>hover를 이용하여 position 이해하기</p>
+                <p>기준을 안잡으면 body가 기준이 되므로 position: relative;로 기준 정해주기</p>
+                <p>after와 before 박스를 만들어서 transition 효과 나타내기</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>가상요소 선택자 : before, after</h2>
+    <details>
+        <summary>2022-06-08</summary>
+        <ul>
+            <li>
+                <a href="./doc/pseudo_element01.html">pseudo element 01</a>
+                <p>가상요소 선택자인 before와 after의 기본이해</p>
+                <p>text 사이 또는 양 옆에 선긋기</p>
+                <p>li앞에 리스트 도트를 before로 적용</p>
+                <p>figure에 data-num으로 숫자적용</p>
+                <p>hr의 기본성질과 그 위에 아이콘 올리기</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>header : 가로배치</h2>
+    <details>
+        <summary>2022-06-09</summary>
+        <ul>
+            <li>
+                <a href="./doc/header01.html">header 01</a>
+                <p>기본적인 틀에 로고와 메뉴 가로배치</p>
+                <p>space-between으로 사이 간격을 띄어줌</p>
+            </li>
+            <li>
+                <a href="./doc/header02.html">header 02</a>
+                <p>로고와 메뉴 옆에 아이콘 배치</p>
+                <p>메뉴와 아이콘 중앙배치</p>
+            </li>
+            <li>
+                <a href="./doc/header03.html">header 03</a>
+                <p>메뉴를 정중앙으로 배치</p>
+                <p>로고와 아이콘을 각각 너비를 주고 메뉴를 중앙으로 배치</p>
+            </li>
+            <li>
+                <a href="./doc/header04.html">header 04</a>
+                <p>메뉴 중앙 배치</p>
+                <p>margin을 좌우로 auto를 적용</p>
+            </li>
+            <li>
+                <a href="./doc/header05.html">header 05</a>
+                <p>로고를 중앙으로 배치</p>
+                <p>flex: 1;</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>슬라이더 : slick</h2>
+    <details>
+        <summary>2022-06-13</summary>
+        <ul>
+            <li>
+                <a href="./doc/slick01.html">slick 01</a>
+                <p>slick에서 만든 js로 슬라이드 효과 - slick이 만든 setting을 쓰기</p>
+                <p>position의 기준을 항상 생각하기</p>
+                <p>css로 가상요소인 after박스를 사용</p>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>2022-06-14</summary>
+        <ul>
+            <li>
+                <a href="./doc/slick02.html">slick 02</a>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>2022-06-15</summary>
+        <ul>
+            <li>
+                <a href="./doc/slick03.html">slick 03 - Main Visual Slide</a>
+                <p>slick을 이용하여 메인 비주얼 슬라이드 만들기</p>
+                <p>글자수에 따라서 박스를 유동적이게 만드는 inline-block</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>동영상 넣기 : movie</h2>
+    <details>
+        <summary>2022-06-16</summary>
+        <ul>
+            <li>
+                <a href="./doc/movie01.html">movie 01</a>
+                <p>배경고정하기 : parallax</p>
+                <p>YTPlayer를 사용해서 유튜브 영상 불러오기</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>Fullpage</h2>
+    <details>
+        <summary>2022-06-16</summary>
+        <ul>
+            <li>
+                <a href="./doc/fullpage01.html">fullpage 01</a>
+                <p>포트폴리오에 쓰이는 풀페이지</p>
+                <p>section class="section"</p>
+                <p>after content에 xeicon사용하고 'on'으로 바꾸기</p>
+            </li>
+        </ul>
+    </details>
+    <hr />
+    <h2>Tab menu</h2>
+    <details>
+        <summary>2022-06-17</summary>
+        <ul>
+            <li>
+                <a href="./doc/tab01.html">tab 01</a>
+                <p>기본적인 탭 메뉴 레이아웃</p>
+                <p>'on'을 붙일 때는 순번이 있는 곳에다가 붙이기</p>
+                <p>자바스크립트 변수가 중복될 경우 'var idx ='</p>
+            </li>
+            <li>
+                <a href="./doc/tab02.html">tab 02</a>
+                <p>탭 메뉴 + slick 슬라이드</p>
+                <p>slick을 쓸 때는 display: none, block;이 안된다 -> visibility를 사용함</p>
+                <p>슬라이드를 absolute로 띄우고 겹쳐놓기</p>
+            </li>
+            <li>
+                <a href="./doc/tab03.html">tab 03</a>
+                <p>지도 위에 위치표시</p>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>2022-07-26</summary>
+        <ul>
+            <li>
+                <a href="./doc/slide_tab01.html">slide tab 01</a>
+            </li>
+            <li>
+                <a href="./doc/slide_tab02.html">slide tab 01</a>
+            </li>
+            <li>
+                <a href="./doc/wheel.html">wheel</a>
+            </li>
+        </ul>
+    </details>
+</body>
+
+</html>
