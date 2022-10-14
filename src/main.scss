@@ -108,36 +108,40 @@ $mainColor: #065d93;
 
     .btn {
         position: fixed;
-        top: 5rem;
-        right: 5rem;
+        top: 50px;
+        right: 50px;
         z-index: 1000;
         font-size: 0;
-        width: 3rem;
-        height: 3rem;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $mainColor;
+        outline: none;
+        background: $mainColor;
 
         &::before {
             content: "";
             position: absolute;
-            top: 0.5rem;
-            left: 0.5rem;
-            right: 0.5rem;
+            top: 10px;
+            left: 5px;
+            right: 5px;
             height: 2px;
-            background: #333;
+            background: #fff;
         }
 
         &::after {
             content: "";
             position: absolute;
-            bottom: 0.5rem;
-            left: 0.5rem;
-            right: 0.5rem;
+            bottom: 10px;
+            left: 5px;
+            right: 5px;
             height: 2px;
-            background: #333;
+            background: #fff;
         }
 
         &.on::before,
         &.on::after {
-            display: none;
+            height: 0px;
+
         }
 
         span::before,
@@ -145,10 +149,10 @@ $mainColor: #065d93;
             content: "";
             position: absolute;
             top: calc(50% - 1px);
-            left: 0.5rem;
-            right: 0.5rem;
+            left: 5px;
+            right: 5px;
             height: 2px;
-            background: #333;
+            background: #fff;
             transition: 0.3s;
         }
 
