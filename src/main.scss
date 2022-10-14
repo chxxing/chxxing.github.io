@@ -1,0 +1,163 @@
+$mainColor: #065d93;
+
+.section {
+    text-align: center;
+
+    h1 {
+        font-size: 150px;
+        font-weight: 900;
+        background: url(../public/assets/images/clouds.jpg) no-repeat top center;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.PF {
+    .Gnb {
+        position: fixed;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        font-size: 0;
+        z-index: 999;
+
+        li {
+            margin: 10px 0;
+
+            a {
+                position: relative;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+                transform: scale(0.7);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 40%;
+                    height: 40%;
+                    background: $mainColor;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+            }
+
+            &.on a {
+                border: 1px solid $mainColor;
+                transform: scale(1);
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    .Cover {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: $mainColor;
+        z-index: 1000;
+        height: 100vh;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+
+        &.on {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 150px 220px;
+            border-radius: 330px 330px 0 0;
+            background: #fff;
+            text-align: center;
+
+            li {
+                font-size: 50px;
+                font-weight: 900;
+                color: #fff;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                a {
+                    -webkit-text-stroke: 1.5px $mainColor;
+                }
+            }
+        }
+    }
+
+    .btn {
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        z-index: 1000;
+        font-size: 0;
+        width: 3rem;
+        height: 3rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            right: 0.5rem;
+            height: 2px;
+            background: #333;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            right: 0.5rem;
+            height: 2px;
+            background: #333;
+        }
+
+        &.on::before,
+        &.on::after {
+            display: none;
+        }
+
+        span::before,
+        span::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 0.5rem;
+            right: 0.5rem;
+            height: 2px;
+            background: #333;
+            transition: 0.3s;
+        }
+
+        &.on span::before {
+            transform: rotate(45deg);
+        }
+
+        &.on span::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
