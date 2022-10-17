@@ -1,15 +1,3 @@
-import styled from 'styled-components';
-
-// const Svg = styled.svg`
-// stroke-dasharray: 1360;
-// animation: dash 2s linear infinite;
-// @keyframes dash {
-//     to {
-//         stroke-dashoffse: 2720;
-//     }
-// }
-// `
-
 const SVGComponent = (props) => (
     <svg
         id="visual"

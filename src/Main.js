@@ -3,6 +3,7 @@ import './main.scss';
 import { profile, pfdata } from './Data';
 import { useState, useRef, useEffect } from 'react';
 import SVGComponent from './SVGComponent';
+import { BsHouseDoor, BsPersonCircle } from "react-icons/bs";
 
 const AC = pfdata.map(el => el = el.title);
 const PFS = pfdata.slice(1, 5);
@@ -57,6 +58,12 @@ const Main = () => {
                     }
                 </ul>
             </nav>
+            <ul className="left">
+                <li><a href='#main'><BsHouseDoor className='iconHome' /></a>
+                </li>
+                <li><a href="#profile"><BsPersonCircle className='iconContact' /></a>
+                </li>
+            </ul>
             <ReactFullpage
                 //fullpage options
                 licenseKey={'YOUR_KEY_HERE'}
@@ -95,6 +102,9 @@ const Main = () => {
                                                         </a>
                                                     </li>
                                                 </ul>
+                                                <div className="left">
+                                                    <div className="stitle">{it.title}</div>
+                                                </div>
                                             </div>
                                         </div>
                                     )
