@@ -1,14 +1,68 @@
 $mainColor: #065d93;
 
 .section {
+    position: relative;
     text-align: center;
 
-    h1 {
-        font-size: 150px;
-        font-weight: 900;
-        background: url(../public/assets/images/clouds.jpg) no-repeat top center;
-        background-clip: text;
-        color: transparent;
+    // * {
+    //     outline: 1px solid blue;
+    // }
+
+    .title {
+        background: #fff;
+        padding: 50px;
+
+        h1 {
+            font-size: 150px;
+            font-weight: 900;
+            font-style: italic;
+            background: url(../public/assets/images/clouds.jpg) no-repeat top center;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .name {
+            position: absolute;
+            display: block;
+            top: calc(50% - 90px);
+            left: 31%;
+            transform: translate(-50%, -50%);
+            font-size: 19px;
+            font-style: italic;
+        }
+
+        .obj {
+            position: absolute;
+            display: block;
+            top: calc(50% + 90px);
+            right: 21%;
+            transform: translate(-50%, -50%);
+            font-size: 19px;
+            font-style: italic;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        #visual {
+            transform: rotate(80deg);
+            stroke-dasharray: 2113px;
+            animation: dash 10s linear infinite;
+
+            @keyframes dash {
+                from {
+                    stroke-dashoffset: 4226px;
+                }
+
+                to {
+                    stroke-dashoffset: 0px;
+                }
+            }
+        }
     }
 }
 
@@ -68,7 +122,7 @@ $mainColor: #065d93;
         top: 0;
         left: 0;
         right: 0;
-        background: $mainColor;
+        background: url(../public/assets/images/cover_bg.svg) no-repeat center;
         z-index: 1000;
         height: 100vh;
         overflow: hidden;
@@ -85,14 +139,14 @@ $mainColor: #065d93;
             display: flex;
             flex-direction: column;
             gap: 30px;
-            padding: 150px 220px;
-            border-radius: 330px 330px 0 0;
-            background: #fff;
+            padding: 150px 200px;
+            background: transparent;
             text-align: center;
 
             li {
                 font-size: 50px;
                 font-weight: 900;
+                font-family: 'pretendard';
                 color: #fff;
 
                 &:hover {
@@ -115,6 +169,7 @@ $mainColor: #065d93;
         width: 40px;
         height: 40px;
         border: 2px solid $mainColor;
+        border-radius: 30px;
         outline: none;
         background: $mainColor;
 
@@ -122,8 +177,8 @@ $mainColor: #065d93;
             content: "";
             position: absolute;
             top: 10px;
-            left: 5px;
-            right: 5px;
+            left: 6px;
+            right: 6px;
             height: 2px;
             background: #fff;
         }
@@ -132,8 +187,8 @@ $mainColor: #065d93;
             content: "";
             position: absolute;
             bottom: 10px;
-            left: 5px;
-            right: 5px;
+            left: 6px;
+            right: 6px;
             height: 2px;
             background: #fff;
         }
@@ -149,8 +204,8 @@ $mainColor: #065d93;
             content: "";
             position: absolute;
             top: calc(50% - 1px);
-            left: 5px;
-            right: 5px;
+            left: 6px;
+            right: 6px;
             height: 2px;
             background: #fff;
             transition: 0.3s;

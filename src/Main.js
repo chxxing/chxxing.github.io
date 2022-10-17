@@ -2,6 +2,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import './main.scss';
 import { profile, pfdata } from './Data';
 import { useState, useRef, useEffect } from 'react';
+import SVGComponent from './SVGComponent';
 
 const AC = pfdata.map(el => el = el.title);
 const PFS = pfdata.slice(1, 5);
@@ -67,9 +68,14 @@ const Main = () => {
                     return (
                         <ReactFullpage.Wrapper>
                             <div className="section">
-                                <h1>PORTFOLIO</h1>
-                                <span>2022 {profile.name}</span>
-                                <strong>{profile.objective}</strong>
+                                <div className="title">
+                                    <span className='name'>2022 {profile.name}</span>
+                                    <h1>PORTFOLIO</h1>
+                                    <strong className='obj'>{profile.objective}</strong>
+                                </div>
+                                <div className="bg">
+                                    <SVGComponent />
+                                </div>
                             </div>
                             {
                                 PFS.map((it, idx) => {

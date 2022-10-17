@@ -1,5 +1,5 @@
 const profile = {
-    name: "choieunjin",
+    name: "Choi EunJin",
     objective: "Front-end Web Developer",
     email: "choing26@naver.com",
     tel: "010-5167-0209"
