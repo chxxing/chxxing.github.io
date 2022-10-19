@@ -90,7 +90,7 @@ const Main = () => {
                             {
                                 PFS.map((it, idx) => {
                                     return (
-                                        <div className="section" key={it.id}>
+                                        <div className="section pj" key={it.id}>
                                             <div className="case">
                                                 <div className="preview">
                                                     <img src="" alt={it.title} />
@@ -110,8 +110,20 @@ const Main = () => {
                                     )
                                 })
                             }
-                            <div className="section">
-                                <div className="case">PROFILE</div>
+                            <div className="section sec_profile">
+                                <div className="case">
+                                    <div className="pic">
+                                        profile picture
+                                    </div>
+                                    <ul className="aboutMe">
+                                        <li>name : {profile.name}</li>
+                                        <li>name : {profile.name}</li>
+                                        <li>name : {profile.name}</li>
+                                        <li>name : {profile.name}</li>
+                                        <li>name : {profile.name}</li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </ReactFullpage.Wrapper>
                     );

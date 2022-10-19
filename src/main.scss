@@ -18,9 +18,20 @@ $mainColor: #065d93;
             font-size: 150px;
             font-weight: 900;
             font-style: italic;
-            background: url(../public/assets/images/clouds.jpg) no-repeat top center;
+            background: url(../public/assets/images/clouds.jpg) no-repeat right center;
             background-clip: text;
             color: transparent;
+            animation: movebg 15s linear infinite alternate;
+
+            @keyframes movebg {
+                0% {
+                    background-position: right;
+                }
+
+                100% {
+                    background-position: left;
+                }
+            }
         }
 
         .slogan {
@@ -269,5 +280,29 @@ $mainColor: #065d93;
         &.on span::after {
             transform: rotate(-45deg);
         }
+    }
+}
+
+.sec_profile {
+    // * {
+    //     outline: 1px solid blue;
+    // }
+
+    .case {
+        display: flex;
+    }
+
+    .pic {
+        width: 50%;
+        height: 100vh;
+        background: url(../public/assets/images/profile_bg.svg) no-repeat center center/cover;
+    }
+
+    .aboutMe {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
     }
 }
