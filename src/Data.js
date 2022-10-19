@@ -1,6 +1,7 @@
 const profile = {
     name: "Choi EunJin",
     objective: "Front-end Web Developer",
+    slogan: "Seize the day !",
     email: "choing26@naver.com",
     tel: "010-5167-0209"
 };

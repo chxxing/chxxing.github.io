@@ -3,7 +3,8 @@ import './main.scss';
 import { profile, pfdata } from './Data';
 import { useState, useRef, useEffect } from 'react';
 import SVGComponent from './SVGComponent';
-import { BsHouseDoor, BsPersonCircle } from "react-icons/bs";
+import { BsHouseDoor, BsPersonCircle, BsTwitter } from "react-icons/bs";
+import { IoAirplane } from 'react-icons/io5';
 
 const AC = pfdata.map(el => el = el.title);
 const PFS = pfdata.slice(1, 5);
@@ -59,6 +60,7 @@ const Main = () => {
                 </ul>
             </nav>
             <ul className="left">
+                <li className='subtitle'>2022<br />Choi EunJin's<br />Portfolio</li>
                 <li><a href='#main'><BsHouseDoor className='iconHome' /></a>
                 </li>
                 <li><a href="#profile"><BsPersonCircle className='iconContact' /></a>
@@ -76,12 +78,13 @@ const Main = () => {
                         <ReactFullpage.Wrapper>
                             <div className="section">
                                 <div className="title">
-                                    <span className='name'>2022 {profile.name}</span>
+                                    <div className="slogan">{profile.slogan}</div>
                                     <h1>PORTFOLIO</h1>
                                     <strong className='obj'>{profile.objective}</strong>
                                 </div>
                                 <div className="bg">
                                     <SVGComponent />
+                                    <IoAirplane className='icoBg' />
                                 </div>
                             </div>
                             {
@@ -102,9 +105,6 @@ const Main = () => {
                                                         </a>
                                                     </li>
                                                 </ul>
-                                                <div className="left">
-                                                    <div className="stitle">{it.title}</div>
-                                                </div>
                                             </div>
                                         </div>
                                     )
