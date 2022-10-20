@@ -2,12 +2,10 @@ $mainColor: #065d93;
 
 .section {
     position: relative;
-    text-align: center;
 
     .case {
         width: 1640px;
         margin: 0 auto;
-        border: 1px solid #ddd;
     }
 
     .title {
@@ -18,6 +16,7 @@ $mainColor: #065d93;
             font-size: 150px;
             font-weight: 900;
             font-style: italic;
+            text-align: center;
             background: url(../public/assets/images/clouds.jpg) no-repeat right center;
             background-clip: text;
             color: transparent;
@@ -284,25 +283,78 @@ $mainColor: #065d93;
 }
 
 .sec_profile {
-    // * {
-    //     outline: 1px solid blue;
-    // }
 
     .case {
         display: flex;
-    }
+        text-align: center;
 
-    .pic {
-        width: 50%;
-        height: 100vh;
-        background: url(../public/assets/images/profile_bg.svg) no-repeat center center/cover;
-    }
+        dl {
+            display: inline-block;
 
-    .aboutMe {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        justify-content: center;
+            dt {
+                font-size: 25px;
+                font-weight: 700;
+                font-style: italic;
+                text-align: left;
+                color: $mainColor;
+                margin: 0 0 35px 0;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    margin: 10px 0;
+                    background: $mainColor;
+                }
+            }
+
+            dd {
+                margin: 0 0 10px 0;
+                text-align: left;
+
+                strong {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .boxLeft {
+            width: 50%;
+            border-right: 1px solid #ddd;
+
+            .pic {
+                width: 300px;
+                height: 300px;
+                margin: 0 auto 50px;
+            }
+        }
+
+        .boxRight {
+            width: 50%;
+
+            .box {
+                width: 500px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .ed {
+                    margin: 0 0 160px 0;
+
+                    dd {
+                        font-family: 'pretendard';
+                        font-size: 17px;
+                        font-weight: 300;
+                        white-space: pre;
+                        line-height: 1.3;
+                    }
+
+
+                }
+            }
+        }
     }
 }

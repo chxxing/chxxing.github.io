@@ -1,5 +1,6 @@
 const profile = {
     name: "Choi EunJin",
+    kname: "최은진",
     objective: "Front-end Web Developer",
     slogan: "Seize the day !",
     email: "choing26@naver.com",
@@ -7,7 +8,7 @@ const profile = {
     education: [
         { ed: "원화여자고등학교 졸업" },
         { ed: "계명대학교 생명과학부 졸업" },
-        { ed: "부산 그린컴퓨터아카데미 리엑트(React)활용 프론트엔드 개발자 양성과정 수료" }
+        { ed: "부산 그린컴퓨터아카데미\n리엑트(React)활용 프론트엔드 개발자 양성과정 수료" }
     ],
     skills: [
         { sk: "HTML" },
@@ -15,6 +16,7 @@ const profile = {
         { sk: "Javascript" },
         { sk: "React" }
     ],
+    license: "자격증",
 };
 
 const pfdata = [

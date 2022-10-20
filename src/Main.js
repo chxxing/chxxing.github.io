@@ -93,7 +93,7 @@ const Main = () => {
                                         <div className="section pj" key={it.id}>
                                             <div className="case">
                                                 <div className="preview">
-                                                    <img src="" alt={it.title} />
+                                                    <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
                                                 </div>
                                                 <ul className="txtBox">
                                                     <li>{it.title}</li>
@@ -112,18 +112,46 @@ const Main = () => {
                             }
                             <div className="section sec_profile">
                                 <div className="case">
-                                    <div className="pic">
-                                        profile picture
+                                    <div className="boxLeft">
+                                        <div className='pic'>
+                                            <img src={process.env.PUBLIC_URL + '/assets/images/profile.png'} alt="" />
+                                        </div>
+                                        <dl className="aboutMe">
+                                            <dt>PROFILE</dt>
+                                            <dd><strong>NAME : </strong>{profile.kname} ( {profile.name} )</dd>
+                                            <dd><strong>E-MAIL : </strong><a href={`mailto:${profile.email}`}>{profile.email}</a></dd>
+                                            <dd><strong>TEL : </strong><a href={`tel:${profile.tel}`}>{profile.tel}</a></dd>
+                                        </dl>
                                     </div>
-                                    <ul className="aboutMe">
-                                        <li>name : {profile.name}</li>
-                                        <li>name : {profile.name}</li>
-                                        <li>name : {profile.name}</li>
-                                        <li>name : {profile.name}</li>
-                                        <li>name : {profile.name}</li>
-                                    </ul>
+                                    <div className="boxRight">
+                                        <div className="box">
+                                            <dl className='ed'>
+                                                <dt>EDUCATION</dt>
+                                                {
+                                                    profile.education.map(it => {
+                                                        return (
+                                                            <dd>
+                                                                {it.ed}
+                                                            </dd>
+                                                        )
+                                                    })
+                                                }
+                                            </dl>
+                                            <dl className='sk'>
+                                                <dt>SKILL & ABILITY</dt>
+                                                {
+                                                    profile.skills.map(it => {
+                                                        return (
+                                                            <dd>
+                                                                {it.sk}
+                                                            </dd>
+                                                        )
+                                                    })
+                                                }
+                                            </dl>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
                         </ReactFullpage.Wrapper>
                     );
