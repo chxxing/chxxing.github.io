@@ -282,6 +282,22 @@ $mainColor: #065d93;
     }
 }
 
+.pj {
+    &:nth-child(odd) {
+        .preview {
+            order: 1;
+        }
+    }
+
+    .case {
+        display: flex;
+
+        .txtBox {
+            align-self: center;
+        }
+    }
+}
+
 .sec_profile {
 
     .case {

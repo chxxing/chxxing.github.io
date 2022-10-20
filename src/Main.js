@@ -93,12 +93,17 @@ const Main = () => {
                                         <div className="section pj" key={it.id}>
                                             <div className="case">
                                                 <div className="preview">
-                                                    <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
+                                                    <a href={it.link} target="_blank">
+                                                        <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
+                                                    </a>
                                                 </div>
                                                 <ul className="txtBox">
                                                     <li>{it.title}</li>
                                                     <li>{it.type}</li>
                                                     <li>{it.info}</li>
+                                                    <li>{it.font}</li>
+                                                    <li>{it.skill}</li>
+                                                    <li>{it.color}</li>
                                                     <li>
                                                         <a href={it.link} target="_blank">
                                                             <button>SITE LINK</button>
