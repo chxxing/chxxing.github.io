@@ -97,19 +97,21 @@ const Main = () => {
                                                         <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
                                                     </a>
                                                 </div>
-                                                <ul className="txtBox">
-                                                    <li>{it.title}</li>
-                                                    <li>{it.type}</li>
-                                                    <li>{it.info}</li>
-                                                    <li>{it.font}</li>
-                                                    <li>{it.skill}</li>
-                                                    <li>{it.color}</li>
-                                                    <li>
-                                                        <a href={it.link} target="_blank">
-                                                            <button>SITE LINK</button>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <div className="txtBox">
+                                                    <ul>
+                                                        <li className='site_title'>{it.title}</li>
+                                                        <li><strong>TYPE</strong> {it.type}</li>
+                                                        <li><strong>INFO</strong> {it.info}</li>
+                                                        <li><strong>FONT</strong> {it.font}</li>
+                                                        <li><strong>SKILLS</strong> {it.skill}</li>
+                                                        <li><strong>COLOR</strong> : {it.color}</li>
+                                                        <li>
+                                                            <a href={it.link} target="_blank">
+                                                                <button>SITE LINK</button>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     )

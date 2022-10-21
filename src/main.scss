@@ -283,6 +283,7 @@ $mainColor: #065d93;
 }
 
 .pj {
+
     &:nth-child(odd) {
         .preview {
             order: 1;
@@ -291,9 +292,41 @@ $mainColor: #065d93;
 
     .case {
         display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .preview {
+            flex: 2;
+        }
 
         .txtBox {
-            align-self: center;
+            flex: 1;
+            position: relative;
+            height: 100vh;
+            background: #ddd;
+
+            ul {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                li {
+                    margin: 0 0 20px 0;
+
+                    strong {
+                        font-size: 21px;
+                        font-weight: 500;
+                    }
+                }
+
+                .site_title {
+                    font-size: 45px;
+                    font-weight: 700;
+                    font-style: italic;
+                    margin: 0 0 30px 0;
+                }
+            }
         }
     }
 }

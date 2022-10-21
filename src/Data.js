@@ -20,7 +20,7 @@ const profile = {
 
 const pfdata = [
     { id: 1, title: "main" },
-    { id: 2, title: "site01", type: "web page01", font: "Noto Sans KR", info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit optio unde quae dolore officia!", color: ["Noto Sans Korean", "Playfair Display", "IM Fell English SC"], skill: ["HTML", "CSS", "jQuery"], src: "", link: "" },
+    { id: 2, title: "site01", type: "web page01", font: "Noto Sans KR", info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit optio unde quae dolore officia!", color: ["#369", "#f0f", "#f00"], skill: ["HTML", "CSS", "jQuery"], src: "", link: "" },
     { id: 3, title: "site02", type: "web page02", font: "Noto Sans KR", info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit optio unde quae dolore officia!", color: [], skill: [], src: "", link: "" },
     { id: 4, title: "site03", type: "web page03", font: "Noto Sans KR", info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit optio unde quae dolore officia!", color: [], skill: [], src: "", link: "" },
     { id: 5, title: "site04", type: "web page04", font: "Noto Sans KR", info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit optio unde quae dolore officia!", color: [], skill: [], src: "", link: "" },
