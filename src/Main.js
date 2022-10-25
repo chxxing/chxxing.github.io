@@ -159,9 +159,9 @@ const Main = () => {
                                             <dl className='ed'>
                                                 <dt>EDUCATION</dt>
                                                 {
-                                                    profile.education.map(it => {
+                                                    profile.education.map((it, idx) => {
                                                         return (
-                                                            <dd>
+                                                            <dd key={idx}>
                                                                 {it.ed}
                                                             </dd>
                                                         )
@@ -171,9 +171,9 @@ const Main = () => {
                                             <dl className='sk'>
                                                 <dt>SKILL & ABILITY</dt>
                                                 {
-                                                    profile.skills.map(it => {
+                                                    profile.skills.map((it, idx) => {
                                                         return (
-                                                            <dd>
+                                                            <dd key={idx}>
                                                                 {it.sk}
                                                             </dd>
                                                         )
