@@ -7,7 +7,7 @@ import { BsHouseDoor, BsPersonCircle, BsTwitter } from "react-icons/bs";
 import { IoAirplane } from 'react-icons/io5';
 
 const AC = pfdata.map(el => el = el.title);
-const PFS = pfdata.slice(1, 5);
+const PFS = pfdata.slice(1, 6);
 
 const Cover = ({ on, setOn }) => {
     const cover = useRef(null);
@@ -97,18 +97,42 @@ const Main = () => {
                                                         <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
                                                     </a>
                                                 </div>
-                                                <div className="txtBox">
+                                                <div className="txtBox" style={{ background: it.color[0] }}>
                                                     <ul>
                                                         <li className='site_title'>{it.title}</li>
-                                                        <li><strong>TYPE</strong> {it.type}</li>
-                                                        <li><strong>INFO</strong> {it.info}</li>
-                                                        <li><strong>FONT</strong> {it.font}</li>
-                                                        <li><strong>SKILLS</strong> {it.skill}</li>
-                                                        <li><strong>COLOR</strong> : {it.color}</li>
-                                                        <li>
+                                                        <li className='site_link'>
                                                             <a href={it.link} target="_blank">
-                                                                <button>SITE LINK</button>
+                                                                View on Web
                                                             </a>
+                                                        </li>
+                                                        <li>
+                                                            <strong>TYPE</strong>
+                                                            <p>{it.type}</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>INFO</strong>
+                                                            <p>{it.info}</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>FONT</strong>
+                                                            <p>{it.font[0]}</p>
+                                                            <p>{it.font[1]}</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>TOOL</strong>
+                                                            <p>{it.skill[0]}</p>
+                                                            <p>{it.skill[1]}</p>
+                                                            <p>{it.skill[2]}</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>COLOR</strong>
+                                                            {
+                                                                it.color.map((color, idx) => {
+                                                                    return (
+                                                                        <span style={{ background: color, fontSize: 0 }} key={idx}>{color}</span>
+                                                                    )
+                                                                })
+                                                            }
                                                         </li>
                                                     </ul>
                                                 </div>

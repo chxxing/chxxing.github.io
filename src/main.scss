@@ -207,6 +207,7 @@ $mainColor: #065d93;
                 font-size: 50px;
                 font-weight: 900;
                 font-family: 'pretendard';
+                text-transform: uppercase;
                 color: #fff;
 
                 &:hover {
@@ -289,6 +290,46 @@ $mainColor: #065d93;
         }
     }
 
+    &:nth-child(2),
+    &:nth-child(5) {
+        .txtBox {
+            color: #222222;
+
+            ul {
+                span {
+                    border: 1px solid rgba(51, 51, 51, 0.5);
+                }
+
+                .site_link {
+                    a {
+                        border: 1px solid rgba(51, 51, 51, 0.5);
+
+                    }
+                }
+            }
+        }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(6) {
+        .txtBox {
+            color: #e9e9e9;
+
+            ul {
+                span {
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                }
+
+                .site_link {
+                    a {
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+
     .case {
         display: flex;
         align-items: center;
@@ -303,7 +344,6 @@ $mainColor: #065d93;
             flex: 1;
             position: relative;
             height: 100vh;
-            background: #ddd;
 
             ul {
                 position: absolute;
@@ -311,20 +351,43 @@ $mainColor: #065d93;
                 left: 50%;
                 transform: translate(-50%, -50%);
 
-                li {
-                    margin: 0 0 20px 0;
-
-                    strong {
-                        font-size: 21px;
-                        font-weight: 500;
-                    }
-                }
-
                 .site_title {
                     font-size: 45px;
                     font-weight: 700;
                     font-style: italic;
                     margin: 0 0 30px 0;
+                }
+
+                li {
+                    margin: 0 0 20px 0;
+
+                    strong {
+                        display: block;
+                        font-size: 21px;
+                        font-weight: 500;
+                        margin: 0 0 10px 0;
+                    }
+
+                    p {
+                        line-height: 1.3;
+                    }
+
+                    span {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        padding: 20px;
+                        border-radius: 50%;
+                        margin: 0 10px 0 0;
+                    }
+                }
+
+                .site_link {
+                    a {
+                        display: inline-block;
+                        font-style: italic;
+                        padding: 7px 15px;
+                    }
                 }
             }
         }
