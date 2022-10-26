@@ -93,9 +93,16 @@ const Main = () => {
                                         <div className="section pj" key={it.id}>
                                             <div className="case">
                                                 <div className="preview">
-                                                    <a href={it.link} target="_blank">
-                                                        <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
-                                                    </a>
+                                                    <div className="imgBox">
+                                                        <figure>
+                                                            <a href={it.link} target='_blank'>
+                                                                <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
+                                                            </a>
+                                                        </figure>
+                                                        <figure className="hpimg">
+                                                            <img src={process.env.PUBLIC_URL + '/assets/images/homepage0' + it.id + '.png'} alt={it.title} />
+                                                        </figure>
+                                                    </div>
                                                 </div>
                                                 <div className="txtBox" style={{ background: it.color[0] }}>
                                                     <ul>
