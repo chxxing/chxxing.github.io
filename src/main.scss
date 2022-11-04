@@ -233,6 +233,7 @@ $mainColor: #065d93;
         border-radius: 30px;
         outline: none;
         background: $mainColor;
+        cursor: pointer;
 
         &::before {
             content: "";
@@ -356,84 +357,97 @@ $mainColor: #065d93;
         padding: 0 100px;
 
         .imgBox {
-            position: relative;
             overflow: hidden;
 
-            &:hover {
-                .hpimg {
-                    img {
-                        transform: translateY(-80%);
-                        transition: 5s;
+            figure {
+                position: relative;
+
+
+                &:hover {
+                    .hp02 {
+                        transform: translate(-50%, -898px);
+                    }
+
+                    .hp04 {
+                        transform: translate(-50%, -2408px);
+                    }
+
+                    .hp05 {
+                        transform: translate(-50%, -1118px);
+                    }
+
+                    .hp06 {
+                        transform: translate(-50%, -1698px);
                     }
                 }
-            }
 
-            .hpimg {
-                position: absolute;
-                top: 35px;
-                left: 50%;
-                width: calc(100% - 110px);
-                height: 100%;
-                transform: translateX(-50%);
-                z-index: -1;
-
-            }
-        }
-    }
-
-    .txtBox {
-        flex: 1;
-        position: relative;
-        height: 100vh;
-
-        ul {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            .site_title {
-                font-size: 45px;
-                font-weight: 700;
-                font-style: italic;
-                margin: 0 0 30px 0;
-                white-space: pre;
-            }
-
-            li {
-                margin: 0 0 20px 0;
-
-                strong {
-                    display: block;
-                    font-size: 21px;
-                    font-weight: 500;
-                    margin: 0 0 10px 0;
-                }
-
-                p {
-                    line-height: 1.3;
-                }
-
-                span {
-                    display: inline-block;
-                    width: 20px;
-                    height: 20px;
-                    padding: 20px;
-                    border-radius: 50%;
-                    margin: 0 10px 0 0;
-                }
-            }
-
-            .site_link {
-                a {
-                    display: inline-block;
-                    font-style: italic;
-                    padding: 7px 15px;
+                .hp {
+                    position: absolute;
+                    top: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 91%;
+                    transition: 4s;
+                    z-index: -1;
                 }
             }
         }
     }
 }
+
+.txtBox {
+    flex: 1;
+    position: relative;
+    height: 100vh;
+
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .site_title {
+            font-size: 45px;
+            font-weight: 700;
+            font-style: italic;
+            margin: 0 0 30px 0;
+            white-space: pre;
+        }
+
+        li {
+            margin: 0 0 20px 0;
+
+            strong {
+                display: block;
+                font-size: 21px;
+                font-weight: 500;
+                margin: 0 0 10px 0;
+            }
+
+            p {
+                line-height: 1.3;
+            }
+
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                padding: 20px;
+                border-radius: 50%;
+                margin: 0 10px 0 0;
+            }
+        }
+
+        .site_link {
+            a {
+                display: inline-block;
+                font-style: italic;
+                padding: 7px 15px;
+            }
+        }
+    }
+}
+
 
 .sec_profile {
 

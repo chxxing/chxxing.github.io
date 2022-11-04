@@ -90,17 +90,15 @@ const Main = () => {
                             {
                                 PFS.map((it, idx) => {
                                     return (
-                                        <div className="section pj" key={it.id}>
+                                        <div className="section pj" key={idx}>
                                             <div className="case">
                                                 <div className="preview">
                                                     <div className="imgBox">
                                                         <figure>
                                                             <a href={it.link} target='_blank'>
-                                                                <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt={it.title} />
+                                                                <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt='' />
+                                                                <img src={process.env.PUBLIC_URL + '/assets/images/homepage0' + it.id + '.png'} alt={it.title} className={'hp hp0' + it.id} />
                                                             </a>
-                                                        </figure>
-                                                        <figure className="hpimg">
-                                                            <img src={process.env.PUBLIC_URL + '/assets/images/homepage0' + it.id + '.png'} alt={it.title} />
                                                         </figure>
                                                     </div>
                                                 </div>
