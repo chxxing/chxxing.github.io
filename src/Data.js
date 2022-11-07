@@ -11,11 +11,11 @@ const profile = {
         { ed: "부산 그린컴퓨터아카데미\n리엑트(React)활용 프론트엔드 개발자 양성과정 수료" }
     ],
     skills: [
-        { sk: "HTML" },
-        { sk: "CSS" },
-        { sk: "Javascript" },
-        { sk: "React" },
-        { sk: "Photoshop" },
+        { id: 1, sk: "HTML5" },
+        { id: 2, sk: "CSS3" },
+        { id: 3, sk: "Javascript" },
+        { id: 4, sk: "React" },
+        { id: 5, sk: "Photoshop" },
     ],
 };
 const pfdata = [

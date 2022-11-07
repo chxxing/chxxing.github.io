@@ -179,6 +179,7 @@ const Main = () => {
                                                     profile.skills.map((it, idx) => {
                                                         return (
                                                             <dd key={idx}>
+                                                                <img src={process.env.PUBLIC_URL + '/assets/images/skill0' + it.id + '.png'} alt="" />
                                                                 {it.sk}
                                                             </dd>
                                                         )
