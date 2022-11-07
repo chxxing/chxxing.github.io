@@ -18,6 +18,14 @@ const profile = {
         { id: 5, sk: "Photoshop" },
     ],
 };
+const trainingHP = [
+    { id: 1, title: "현대엘리베이터-javascript", src: "/assets/images/hpimg01", link: "https://chxxing.github.io/hd_jquery" },
+    { id: 2, title: "현대엘리베이터-jQuery", src: "/assets/images/hpimg02", link: "https://chxxing.github.io/hd_javascript" },
+    { id: 3, title: "현대엘리베이터-react", src: "/assets/images/hpimg03", link: "https://chxxing.github.io/hd_react" },
+    { id: 4, title: "카시아속초호텔-javascript", src: "/assets/images/hpimg04", link: "https://chxxing.github.io/cassia" },
+    { id: 5, title: "부산청소-react", src: "/assets/images/hpimg05", link: "https://chxxing.github.io/clean_spa" },
+    { id: 5, title: "피몽쉐-react", src: "/assets/images/hpimg05", link: "https://chxxing.github.io/phymongshe_shop/" },
+]
 const pfdata = [
     { id: 1, title: "main" },
     { id: 2, title: "TASAKI", type: "Standard Web", font: ["Pretendard", "Noto Serif KR",], info: "리액트를 활용하여 타사키 쥬얼리 홈페이지를 리뉴얼하였으며, 메인메뉴와 탭메뉴는 React-router를 사용하였습니다.", color: ["#e3f0ea", "#dee2e6"], skill: ["ReactJS", "Sass", "React-Router"], link: "https://chxxing.github.io/react_tasaki/" },
@@ -25,7 +33,8 @@ const pfdata = [
     { id: 4, title: "ESSA", type: "Responsive Web", font: ["Pretendard", "Noto Serif KR", 'Montserrat'], info: "에싸홈페이지를 리뉴얼하였으며, slick을 활용한 슬라이드와 AOS 라이브러리를 사용하여 스크롤 애니메이션을 구현했습니다.", color: ["#a36d6b", "#573036"], skill: ["HTML5", "CSS3", "Javascript(jQuery)"], link: "https://chxxing.github.io/essa_my/" },
     { id: 5, title: "Kyochon", type: "Responsive Web", font: ["Noto Sans KR", "Noto Serif KR"], info: "교촌치킨 홈페이지를 리뉴얼하였으며, slick을 활용한 슬라이드를 구현했습니다.", color: ["#f9b52c", "#b99764"], skill: ["HTML5", "CSS3", "Javascript(jQuery)"], link: "https://chxxing.github.io/kyochon_my/" },
     { id: 6, title: "Dentiste", type: "Standard Web", font: ["Noto Sans KR"], info: "덴티스테 홈페이지를 리뉴얼하였으며, swiper를 활용한 슬라이드를 구현했습니다.", color: ["#017552", "#dddddd"], skill: ["HTML5", "CSS3", "Vanilla JS"], link: "https://chxxing.github.io/dentiste_my/" },
-    { id: 7, title: "profile" }
+    { id: 7, title: "training" },
+    { id: 8, title: "profile" }
 ];
 
 export { profile, pfdata };

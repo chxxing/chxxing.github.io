@@ -146,7 +146,12 @@ const Main = () => {
                                     )
                                 })
                             }
-                            <div className="section sec_profile">
+                            <div className="section trhp">
+                                <div className="case">
+                                    training
+                                </div>
+                            </div>
+                            <div className="section profile">
                                 <div className="case">
                                     <div className="boxLeft">
                                         <div className='pic'>
