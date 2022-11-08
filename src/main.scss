@@ -173,6 +173,14 @@ $mainColor: #065d93;
             font-style: italic;
             text-align: left;
         }
+
+        .icon {
+            transition: 0.2s;
+
+            &:hover {
+                color: #065d93;
+            }
+        }
     }
 
     .Cover {
@@ -345,50 +353,50 @@ $mainColor: #065d93;
             }
         }
     }
-}
 
-.case {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .case {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    .preview {
-        flex: 2;
-        padding: 0 100px;
+        .preview {
+            flex: 2;
+            padding: 0 100px;
 
-        .imgBox {
-            overflow: hidden;
+            .imgBox {
+                overflow: hidden;
 
-            figure {
-                position: relative;
+                figure {
+                    position: relative;
 
 
-                &:hover {
-                    .hp02 {
-                        transform: translate(-50%, -898px);
+                    &:hover {
+                        .hp02 {
+                            transform: translate(-50%, -898px);
+                        }
+
+                        .hp04 {
+                            transform: translate(-50%, -2408px);
+                        }
+
+                        .hp05 {
+                            transform: translate(-50%, -1118px);
+                        }
+
+                        .hp06 {
+                            transform: translate(-50%, -1698px);
+                        }
                     }
 
-                    .hp04 {
-                        transform: translate(-50%, -2408px);
+                    .hp {
+                        position: absolute;
+                        top: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 91%;
+                        transition: 4s;
+                        z-index: -1;
                     }
-
-                    .hp05 {
-                        transform: translate(-50%, -1118px);
-                    }
-
-                    .hp06 {
-                        transform: translate(-50%, -1698px);
-                    }
-                }
-
-                .hp {
-                    position: absolute;
-                    top: 30px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 91%;
-                    transition: 4s;
-                    z-index: -1;
                 }
             }
         }
@@ -448,6 +456,46 @@ $mainColor: #065d93;
     }
 }
 
+.trhp {
+    text-align: center;
+
+    h2 {
+        font-size: 35px;
+        font-weight: 700;
+        font-style: italic;
+        margin: 0 0 40px 0;
+    }
+
+    .case {
+        width: 1800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        figure {
+            img {
+                max-width: 470px;
+                margin: 0 0 20px 0;
+            }
+
+            .des {
+                margin: 0 0 30px 0;
+                font-family: "pretendard";
+                font-size: 17px;
+
+                span {
+                    border: 1px solid #ddd;
+                    border-radius: 30px;
+                    padding: 5px 20px;
+                    font-weight: 500;
+                    font-style: italic;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+    }
+}
 
 .profile {
 

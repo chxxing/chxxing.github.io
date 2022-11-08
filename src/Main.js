@@ -1,6 +1,6 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 import './main.scss';
-import { profile, pfdata } from './Data';
+import { profile, pfdata, trainingHP } from './Data';
 import { useState, useRef, useEffect } from 'react';
 import SVGComponent from './SVGComponent';
 import { BsHouseDoor, BsPersonCircle, BsTwitter } from "react-icons/bs";
@@ -61,9 +61,9 @@ const Main = () => {
             </nav>
             <ul className="left">
                 <li className='subtitle'>2022<br />Choi EunJin's<br />Portfolio</li>
-                <li><a href='#main'><BsHouseDoor className='iconHome' /></a>
+                <li className='icon'><a href='#main'><BsHouseDoor className='iconHome' /></a>
                 </li>
-                <li><a href="#profile"><BsPersonCircle className='iconContact' /></a>
+                <li className='icon'><a href="#profile"><BsPersonCircle className='iconContact' /></a>
                 </li>
             </ul>
             <ReactFullpage
@@ -96,7 +96,7 @@ const Main = () => {
                                                     <div className="imgBox">
                                                         <figure>
                                                             <a href={it.link} target='_blank'>
-                                                                <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt='' />
+                                                                <img src={process.env.PUBLIC_URL + '/assets/images/moniter.png'} alt='모니터' />
                                                                 <img src={process.env.PUBLIC_URL + '/assets/images/homepage0' + it.id + '.png'} alt={it.title} className={'hp hp0' + it.id} />
                                                             </a>
                                                         </figure>
@@ -147,15 +147,27 @@ const Main = () => {
                                 })
                             }
                             <div className="section trhp">
+                                <h2>TRAINING</h2>
                                 <div className="case">
-                                    training
+                                    {
+                                        trainingHP.map(it => {
+                                            return (
+                                                <figure key={it.id}>
+                                                    <a href={it.link} target='_blank'>
+                                                        <img src={process.env.PUBLIC_URL + it.src} alt={it.title} />
+                                                        <div className="des"><span>{it.skill}</span> {it.title}</div>
+                                                    </a>
+                                                </figure>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                             <div className="section profile">
                                 <div className="case">
                                     <div className="boxLeft">
                                         <div className='pic'>
-                                            <img src={process.env.PUBLIC_URL + '/assets/images/profile.png'} alt="" />
+                                            <img src={process.env.PUBLIC_URL + '/assets/images/profile.png'} alt="프로필사진" />
                                         </div>
                                         <dl className="aboutMe">
                                             <dt>PROFILE</dt>
@@ -184,7 +196,7 @@ const Main = () => {
                                                     profile.skills.map((it, idx) => {
                                                         return (
                                                             <dd key={idx}>
-                                                                <img src={process.env.PUBLIC_URL + '/assets/images/skill0' + it.id + '.png'} alt="" />
+                                                                <img src={process.env.PUBLIC_URL + '/assets/images/skill0' + it.id + '.png'} alt={it.sk} />
                                                                 {it.sk}
                                                             </dd>
                                                         )
