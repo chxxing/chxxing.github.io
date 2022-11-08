@@ -22,7 +22,7 @@ const trainingHP = [
     { id: 1, title: "현대엘리베이터", skill: "jQuery", src: "/assets/images/hpimg01.jpg", link: "https://chxxing.github.io/hd_jquery" },
     { id: 2, title: "현대엘리베이터", skill: "Javascript", src: "/assets/images/hpimg02.jpg", link: "https://chxxing.github.io/hd_javascript" },
     { id: 3, title: "카시아속초호텔", skill: "Javascript", src: "/assets/images/hpimg03.jpg", link: "https://chxxing.github.io/cassia" },
-    { id: 4, title: "현대엘리베이터", skill: "React", src: "/assets/images/hpimg04.jpg", link: "https://chxxing.github.io/hd_react" },
+    { id: 4, title: "영화검색", skill: "React , open API", src: "/assets/images/hpimg04.jpg", link: "https://chxxing.github.io/re_movie" },
     { id: 5, title: "부산청소", skill: "React", src: "/assets/images/hpimg05.jpg", link: "https://chxxing.github.io/clean_spa" },
     { id: 6, title: "피몽쉐", skill: "React", src: "/assets/images/hpimg06.jpg", link: "https://chxxing.github.io/phymongshe_shop/" },
 ]
